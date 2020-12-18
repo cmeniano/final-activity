@@ -1,0 +1,25 @@
+<div class="row">
+        <div class="col-12">
+            <div class="sidebar">
+              <br>
+                <img class="profile-pic"src="{{userInfo ? userInfo.meta.photo_url : 'https://via.placeholder.com/150' }} "alt="">
+                <br>
+                <hr>
+               <div class="text-center"> <button *ngIf = "isLogged"  routerLink="/my-profile" type="button" class="btn btn-dark edit-profile">Edit Profile</button></div>
+               <br>
+                <p class="user-info" ><span>Name</span>:<br> {{userInfo ?.name}} </p>
+                <p class="user-info"> <span>Job Title:</span> <br> {{userInfo ?.meta.job_title}}</p>
+                <p class="user-info"><span>Email:</span><br> {{userInfo ?.email}}</p>
+                <p class="user-info"><span>Mobile No. </span><br> {{userInfo ?.meta.mobile_number}}</p>
+              </div>
+             
+        </div>
+        <!-- <div class="col-6">
+              <h2>Welcome!</h2>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+        </div> -->
+        <!-- <div class="col-6">
+                <router-outlet></router-outlet>
+        </div> -->
+      </div> 
+     

@@ -1,0 +1,16 @@
+<h1>Tickets</h1>
+<tr *ngFor="let ticket of ticket_info">
+    <td class="alias"*ngIf="ticket.id == id"> <h2>[  {{ticket.template.alias}}  ]</h2></td>
+</tr>
+<br><br>
+
+<div class="col-12 container-fluid">
+        <tr *ngFor="let ticket of ticket_info">
+                <p class="info-ticket" *ngIf="ticket.id == id">Submitted at : {{ticket.created_at}} </p>
+                <p class="info-ticket" *ngIf="ticket.id == id">Priority : {{ticket.priority}}</p>
+                <p class="info-ticket" *ngIf="ticket.id == id">Status : {{ticket.status}}</p>
+                <p class="info-ticket" *ngIf="ticket.id == id">Assignee : {{ticket.assignee ? ticket.assignee: 'Unassigned'}}</p>
+            </tr>
+            <br>
+    <button class="btn btn-dark" (click)="goBack()">Back</button>
+</div>
